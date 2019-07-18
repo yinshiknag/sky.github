@@ -1,0 +1,40 @@
+.logo1{
+    margin-top: -20px;
+    width: 45px;
+    position: absolute;
+}
+.logo a{
+	margin-left: 32px;
+}
+.logo2{
+	margin-left:260px;
+    position: absolute;
+}
+.logo3{
+	width: 180px;
+    height: 6px;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 35px;
+}
+.logosp{
+	width:85px;
+	height:6px;
+	display: block;
+	background-color:rgba(85, 217, 229, 1);
+}
+.logoan{
+	margin-left:10px;
+	width:85px;
+	height:6px;
+	display: block;
+	margin:-6px 0 0 95px;
+    background-color:rgba(242, 242, 242, 1);
+}
+.ulnav li img{
+	display:block;
+	width:85px;
+}
+.ulnav li a{
+	text-align: center;
+}

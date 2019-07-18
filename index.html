@@ -1,14 +1,75 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>sky</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-</head>
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Home</title>
+		<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+		<link href="css/style.css" rel='stylesheet' type='text/css' />
+		<link href="css/index.css" rel='stylesheet' type='text/css' />
+    <script src="js/jquery.min.js"></script>
+    
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.0/mapbox-gl.css' rel='stylesheet' />
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    </script>
+    <style>
+      body {
+      margin: 0;
+      padding: 0;
+    }
+    #map {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+    </style>
+	</head>
 <body>
-    <div> 
-        <h1>Hello Word</h1>
-    </div>
+  <div id='map'></div>
+	<!---- container ---->
+		<!---- header ----->
+		<div class="header">
+			<div class="container">
+				<!--- logo ----->
+				<div class="logo">
+                    <img class="logo1" src="image/logo1.png">
+					<a href="index.html">西长安街数字红墙分析应用系统</a>
+					<div class="logo3"><span class="logosp"></span><span class="logoan"></span></div>
+					<img class="logo2" src="image/logo2.png">
+				</div>
+				<!--- logo ----->
+				<!--- top-nav ----->
+				<div class="top-nav">
+					<span class="menu"> </span>
+					<ul class="ulnav" id="navid">
+						<li class="navli active"><a href="javascript:;">12345热线工作<img src="image/bottom.png"></a></li>
+						<li class="navli"><a href="javascript:;">平安建设<img src="image/bottom.png"></a></li>
+						<li class="navli"><a href="javascript:;">城市管理<img src="image/bottom.png"></a></li>
+						<li class="navli"><a href="javascript:;">民生保障<img src="image/bottom.png"></a></li>
+						<li class="navli"><a href="javascript:;">地区协调<img src="image/bottom.png"></a></li>
+					</ul>
+				</div>
+				<div class="clearfix"> </div>
 
+			
+			</div>
+			</div>
+      <script src="js/index.js"></script>
+      
+      <script>
+        mapboxgl.accessToken = 'pk.eyJ1Ijoic2t5MSIsImEiOiJjang0NDlsOG0wMGZrNDNxdzJ5M3Zqb3cwIn0.j7l8P7wr53pSG7OHpbvMUg';
+        var map = new mapboxgl.Map({
+        container: 'map',
+        zoom: 14,
+        center: [116.397398,39.908305],
+       // style: 'mapbox://styles/mapbox/streets-v9'//标准版
+       // style: 'mapbox://styles/mapbox/satellite-v9'//影像版
+        style: '/data/root.json'
+        
+        });
+      </script>
+	</body>
 </html>
+
