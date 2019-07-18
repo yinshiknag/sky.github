@@ -63,7 +63,8 @@
         var map = new mapboxgl.Map({
         container: 'map',
         zoom: 14,
-        center: [116.397398,39.908305],
+        pitch: 60, 
+        center: [116.373797, 39.919731],
        // style: 'mapbox://styles/mapbox/streets-v9'//标准版
        // style: 'mapbox://styles/mapbox/satellite-v9'//影像版
         style: '/data/root.json'
@@ -109,7 +110,6 @@
                           }
                           },
                           "layout": {
-                              "icon-rotation-alignment":"map",
                               "icon-image": "cat",
                               "icon-size": 0.4
                           }
