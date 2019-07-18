@@ -69,7 +69,53 @@
         style: '/data/root.json'
         
         });
+
+        map.on('load', function () {
+              map.addLayer({
+                  "id": "route",
+                  "type": "line",
+                  "source": {
+                    "type": "geojson",
+                    "data": "/data/line.geojson",
+                    "maxzoom":11
+                  },
+                  "layout": {
+                      "line-join": "miter",
+                      "line-cap": "round"
+                  },
+                  "paint": {
+                      //"line-color": "#fff",
+                      "line-color": "hsla(100, 50%, 50%, 1)",
+                      "line-width": 8
+                  }
+              });
+              map.loadImage('/image/point.png', function(error, image) {
+                          if (error) throw error;
+                          map.addImage('cat', image);
+                          map.addLayer({
+                              "id": "points",
+                              "type": "symbol",
+                              "source": {
+                              "type": "geojson",
+                              "data": {
+                              "type": "FeatureCollection",
+                              "features": [{
+                              "type": "Feature",
+                              "geometry": {
+                              "type": "Point",
+                              "coordinates": [116.373797, 39.919731]
+                          }
+                          }]
+                          }
+                          },
+                          "layout": {
+                              "icon-rotation-alignment":"map",
+                              "icon-image": "cat",
+                              "icon-size": 0.4
+                          }
+                          });
+                          });
+                        });
       </script>
 	</body>
 </html>
-
